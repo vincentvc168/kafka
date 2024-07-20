@@ -29,5 +29,11 @@ sudo apt-get update; sudo apt-get install -y java-11-amazon-corretto-jdk
 # Kafka Course Source Code
 git clone https://github.com/conduktor/kafka-beginners-course.git
 
+# Intellj Community Version
+# https://www.jetbrains.com/edu-products/download/#section=idea
+curl -LO https://download.jetbrains.com/idea/ideaIC-2024.1.4.tar.gz
+tar -xvf ideaIC-2024.1.4.tar.gz
+
 # Kafka Setup
 curl -L https://releases.conduktor.io/quick-start -o docker-compose.yml && docker compose up -d --wait && echo "Conduktor started on http://localhost:8080"
+
