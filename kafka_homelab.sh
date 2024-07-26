@@ -35,7 +35,7 @@ curl -LO https://download.jetbrains.com/idea/ideaIC-2024.1.4.tar.gz
 tar -xvf ideaIC-2024.1.4.tar.gz
 
 # Kafka CLI
-curl -LO curl -LO https://downloads.apache.org/kafka/3.7.1/kafka_2.13-3.7.1.tgz
+curl -LO https://downloads.apache.org/kafka/3.7.1/kafka_2.13-3.7.1.tgz
 tar -xvf kafka_2.13-3.7.1.tgz
 
 # Kafka Setup
