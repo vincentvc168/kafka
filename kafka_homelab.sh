@@ -38,6 +38,15 @@ tar -xvf ideaIC-2024.1.4.tar.gz
 curl -LO https://downloads.apache.org/kafka/3.7.1/kafka_2.13-3.7.1.tgz
 tar -xvf kafka_2.13-3.7.1.tgz
 
+# Confluent CLI
+sudo apt install curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl https://packages.confluent.io/confluent-cli/deb/archive.key | sudo gpg --dearmor -o /etc/apt/keyrings/confluent-cli.gpg
+sudo chmod go+r /etc/apt/keyrings/confluent-cli.gpg
+echo "deb [signed-by=/etc/apt/keyrings/confluent-cli.gpg] https://packages.confluent.io/confluent-cli/deb stable main" | sudo tee /etc/apt/sources.list.d/confluent-cli.list >/dev/null
+sudo apt update
+sudo apt install confluent-cli
+
 # Kafka Setup
 curl -L https://releases.conduktor.io/quick-start -o docker-compose.yml && docker compose up -d --wait && echo "Conduktor started on http://localhost:8080"
 
